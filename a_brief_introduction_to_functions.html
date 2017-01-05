@@ -331,75 +331,6 @@ Time to build a little page with some simple functionality.
 var hello = function() {
 	console.log("Our site says: Hello");
 };
-
-// Call our hello function.
-hello();
-```
-
-> main.js
-
-<a href="http://codepen.io/seanhealy/pen/mRyQZx/?editors=1011" target="_blank">*Run It*</a>
-
----
-
-# Add A Button
-
-```html
-<html>
-	<body>
-		<h1>Hello World!</h1>
-		<button id="my-button">My Button</button>
-		<script src="main.js"></script>
-	</body>
-</html>
-```
-
-> index.html
-
-<a href="http://codepen.io/seanhealy/pen/qRELWm/?editors=1011" target="_blank">*Run It*</a>
-
----
-
-# Add A Button
-
-```javascript
-var hello = function() {
-	console.log("Our site says: Hello");
-};
-
-hello();
-
-// Get a reference to our button.
-var myButton = document.getElementById("my-button");
-
-// Create a function for our button's action.
-var buttonClick = function() {
-	console.log("Our site says: You clicked the Button.");
-};
-
-// Call our button function on click.
-myButton.addEventListener("click", buttonClick);
-```
-
-> main.js
-
-<a href="http://codepen.io/seanhealy/pen/qRELWm/?editors=1011" target="_blank">*Run It*</a>
-
----
-
-# Lets Simplify Some Repetition (Version A)
-
-```javascript
-// Create a function for announcements.
-var announce = function(message) {
-	console.log("Our site says: " + message);
-};
-
-var hello = function() {
-	announce("Hello");
-};
-
-hello();
 # A Brief Introduction to Functions
 ## Sean Healy
 
@@ -617,7 +548,7 @@ var buildAnnouncement = function(message) {
 };
 
 var hello = function() {
-	var announcement = buildAnnouncement("Hello")
+	var announcement = buildAnnouncement("Hello");
 	console.log(announcement);
 };
 
@@ -625,7 +556,7 @@ hello();
 
 var myButton = document.getElementById("my-button");
 var buttonClick = function() {
-	var announcement = buildAnnouncement("You clicked the Button.")
+	var announcement = buildAnnouncement("You clicked the Button.");
 	console.log(announcement);
 };
 
@@ -640,6 +571,7 @@ myButton.addEventListener("click", buttonClick);
 
 # *Fin!*
 @seanhealy
+	    
     </textarea>
     <script>
       var slideshow = remark.create();
